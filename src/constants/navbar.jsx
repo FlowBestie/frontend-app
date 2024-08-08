@@ -41,12 +41,12 @@ const Navbar = () => {
           </Link>
         </div>
 
-        Mobile Menu Icon
+        {/* Mobile Menu Icon
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-white focus:outline-none" aria-label="Toggle menu">
             <Menu className="w-6 h-6" />
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Mobile Menu

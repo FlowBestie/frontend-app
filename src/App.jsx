@@ -6,9 +6,9 @@ import PeriodResources from './pages/pages/periodResources';
 import SignIn from './pages/pages/signin';
 import SignUp from './pages/pages/signup';
 import RootLayout from './layouts/rootLayout';
-import About from './pages/about'; 
+import About from './pages/about';
 import Resources from './pages/pages/periodResources/resources';
-import Footer from './constants/footer';
+import { ToastContainer } from "react-toastify";
 
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
           element: <LandingPage />,
         },
         {
-          path: '/about', 
+          path: '/about',
           element: <About />,
         },
         {
@@ -30,11 +30,11 @@ function App() {
           element: <PeriodCalculator />,
         },
         {
-          path: '/period-resources', 
+          path: '/period-resources',
           element: <PeriodResources />,
         },
         {
-          path: '/resources', 
+          path: '/resources',
           element: <Resources />,
         },
         {
@@ -45,15 +45,17 @@ function App() {
           path: '/sign-up',
           element: <SignUp />,
         },
-        {
-          path: '/footer',
-          element: <Footer />,
-        },
+       
       ],
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <ToastContainer />
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
 export default App;
