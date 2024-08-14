@@ -1,16 +1,14 @@
-// About.jsx
-
 import React from 'react';
 import { FaRegHeart, FaRegLightbulb, FaRegUser } from 'react-icons/fa';
 
 const About = () => {
   return (
-    <section className="text-center py-16 px-4 lg:px-8 bg-white">
+    <section className="text-center py-16 px-4 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-8 text-pink-600">About Us</h2>
         
         <p className="text-lg max-w-2xl mx-auto mb-10">
-          Welcome to <span className="font-semibold text-pink-600">FlowBestie</span>, your trusted companion in period management. Our app is designed to empower you with the tools and insights you need to understand your menstrual health better.
+          Welcome to <span className="font-semibold text-pink-600">flowBestie</span>, your trusted companion in period management. Our app is designed to empower you with the tools and insights you need to understand your menstrual health better.
         </p>
         
         <div className="flex flex-col md:flex-row justify-around items-center mb-12">
@@ -37,9 +35,9 @@ const About = () => {
           </div>
         </div>
 
-        <div className="bg-gray-100 py-8 px-4 rounded-lg shadow-md">
+        <div className="py-8 px-4 rounded-lg shadow-md">
           <h3 className="text-2xl font-semibold mb-4 text-pink-600">Our Achievements</h3>
-          <p className="mb-4">With over 1 million downloads and a 4.8-star rating, FlowBestie is trusted by users worldwide.</p>
+          <p className="mb-4">With over 1 million downloads and a 4.8-star rating, flowBestie is trusted by users worldwide.</p>
           <p>Join us and become part of a community that values health, support, and empowerment.</p>
         </div>
       </div>

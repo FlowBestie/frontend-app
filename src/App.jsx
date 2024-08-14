@@ -9,6 +9,7 @@ import RootLayout from './layouts/rootLayout';
 import About from './pages/about';
 import Resources from './pages/pages/periodResources/resources';
 import { ToastContainer } from "react-toastify";
+import Dashboard from './pages/pages/dashboard';
 
 
 function App() {
@@ -44,6 +45,10 @@ function App() {
         {
           path: '/sign-up',
           element: <SignUp />,
+        },
+        {
+          path: '/dashboard',
+          element: <Dashboard />,
         },
        
       ],
