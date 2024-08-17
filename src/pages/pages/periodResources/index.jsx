@@ -30,8 +30,8 @@ const PeriodResources = () => {
     style={{ backgroundImage: "url('/src/assets/images/blueleaves.webp')" }}
 
     >
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-semibold mb-8 text-center">Period Resources</h2>
+      <div className="max-w-4xl mx-auto py-16">
+        <h2 className="text-3xl font-semibold mb-8 text-center">Resources</h2>
         <p className="text-lg text-center mb-12">
           Explore these resources to learn more about menstrual health, track your cycle, and make informed choices.
         </p>

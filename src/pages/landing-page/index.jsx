@@ -1,47 +1,49 @@
-import About from '../../pages/about';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   return (
     <div
       className="min-h-screen flex flex-col text-white"
       style={{
-        backgroundImage: "url('/src/assets/images/flower.jpg')",
+        backgroundImage: "url('/src/assets/images/twohands.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
       }}
     >
-      {/* Navbar */}
-      <nav className="bg-gray-900 w-full py-4 px-8 shadow-lg">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="text-white text-xl font-semibold">
-            {/* Logo or Title */}
-            Period Tracker
+      {/* Main Content */}
+      <div className="bg-black bg-opacity-60 w-full flex-grow flex flex-col items-center justify-center px-8 md:px-12">
+        <div className="text-center">
+          <h3 className="text-2xl md:text-6xl mb-4 leading-tight py-36">
+            Talk Periods To Us!
+          </h3>
+          <p className="text-lg md:text-xl mb-6">
+            Stay on top of your cycle with our easy-to-use period tracker. <br /> 
+            Plan ahead and take control of your health.
+          </p>
+
+          <div className="flex justify-center mb-8">
+            <Link to="/sign-up" className="bg-gray-800 hover:bg-pink-400 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300">
+              Get Started
+            </Link>
           </div>
-          <div>
-            <ul className="flex space-x-6">
-              <li><a href="#about" className="text-gray-300 hover:text-white">About</a></li>
-              <li><a href="#features" className="text-gray-300 hover:text-white">Features</a></li>
-              <li><a href="#contact" className="text-gray-300 hover:text-white">Contact</a></li>
-              <li><a href="#signup" className="text-gray-300 hover:text-white">Sign Up</a></li>
+
+
+          <div className="bg-gray-800 bg-opacity-80 p-6 rounded-lg shadow-lg max-w-2xl mx-auto my-8">
+            <h2 className="text-2xl font-semibold mb-4">Features</h2>
+            <ul className="list-disc pl-5 space-y-3">
+              <li>Track your cycle accurately with our intuitive calendar.</li>
+              <li>Receive reminders and notifications to stay informed.</li>
+              <li>Access detailed insights and historical data.</li>
+              <li>Determine when next you will ovulate.</li>
+              <li>Determine your most fertile days.</li>
+              <li>Access detailed information on menstruation.</li>
+              <li>Access detailed on how to prep for your period.</li>
+              <li>Access your personalized dashboard.</li>
+
             </ul>
           </div>
-        </div>
-      </nav>
-
-      {/* Main Content */}
-      <div className="bg-black bg-opacity-90 w-full flex-grow flex flex-col items-center justify-center">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-white">
-            Period Tracker
-          </h1>
-          <p className="text-lg sm:text-xl mt-4 text-gray-300">
-            Plan ahead. Predict when your next period will arrive. Get insights on your cycle.
-          </p>
-        </div>
-
-        <div className="bg-gray-800 bg-opacity-90 text-white rounded-lg p-8 mb-10 max-w-3xl mx-auto shadow-lg">
-          <About />
         </div>
       </div>
     </div>

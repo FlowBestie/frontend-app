@@ -17,47 +17,49 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white"     style={{ backgroundImage: "url('/src/assets/images/blueleaves.webp')" }}
->
-      <div className="max-w-5xl mx-auto py-10">
-        <h1 className="text-4xl font-bold text-center mb-10">Your Cycle Results</h1>
-        <nav className="flex justify-center mb-6">
-          <a href="#" className="px-4 py-2 text-lg text-pink-600 border-b-2 border-pink-600">Dashboard</a>
-          <a href="#" className="px-4 py-2 text-lg text-gray-400">Calendar</a>
+    <div
+      className="min-h-screen bg-pink-50 text-pink-900"
+      style={{ backgroundImage: "url('/src/assets/images/pastel-flowers.webp')" }}
+    >
+      <div className="max-w-4xl mx-auto py-24">
+        <h1 className="text-5xl font-extrabold text-center mb-12 py-6">Your Cycle Results</h1>
+        <nav className="flex justify-center mb-8">
+          <a href="#" className="px-5 py-2 text-lg text-pink-600 border-b-4 border-pink-600">Dashboard</a>
+          <a href="#" className="px-5 py-2 text-lg text-pink-300">Calendar</a>
         </nav>
 
-        <div className="bg-gray-900 p-6 rounded-lg mb-6">
-          <h2 className="text-xl font-semibold mb-2">Current Cycle Day</h2>
+        <div className="bg-white shadow-lg p-8 rounded-3xl mb-8">
+          <h2 className="text-2xl font-semibold mb-3">Current Cycle Day</h2>
           <p className="text-lg mb-4">Day {cycleData.currentDay}</p>
           <p>Your current cycle started on {cycleData.startDate}</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-pink-600 text-lg font-semibold mb-2">Next period date</h3>
-            <p className="text-3xl font-bold">{cycleData.nextPeriodDate}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white shadow-lg p-8 rounded-3xl">
+            <h3 className="text-pink-600 text-lg font-semibold mb-3">Next period date</h3>
+            <p className="text-4xl font-extrabold">{cycleData.nextPeriodDate}</p>
           </div>
-          <div className="bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-pink-600 text-lg font-semibold mb-2">Next period starts in</h3>
-            <p className="text-3xl font-bold">{cycleData.daysUntilNextPeriod} days</p>
+          <div className="bg-white shadow-lg p-8 rounded-3xl">
+            <h3 className="text-pink-600 text-lg font-semibold mb-3">Next period starts in</h3>
+            <p className="text-4xl font-extrabold">{cycleData.daysUntilNextPeriod} days</p>
           </div>
-          <div className="bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-pink-600 text-lg font-semibold mb-2">Approximate first day of ovulation</h3>
-            <p className="text-3xl font-bold">{cycleData.nextOvulationDate}</p>
+          <div className="bg-white shadow-lg p-8 rounded-3xl">
+            <h3 className="text-pink-600 text-lg font-semibold mb-3">Approximate first day of ovulation</h3>
+            <p className="text-4xl font-extrabold">{cycleData.nextOvulationDate}</p>
           </div>
         </div>
 
-        <div className="bg-gray-800 p-6 rounded-lg mt-6">
-          <h3 className="text-lg font-semibold text-pink-600 mb-2">Most Fertile Days</h3>
+        <div className="bg-white shadow-lg p-8 rounded-3xl mt-8">
+          <h3 className="text-lg font-semibold text-pink-600 mb-3">Most Fertile Days</h3>
           <p className="text-lg">
             {cycleData.mostFertileDays.join(', ')}
           </p>
         </div>
 
-        <div className="text-center mt-8">
+        <div className="text-center mt-10">
           <button
             onClick={(event) => addToCalendar(cycleData.nextPeriodDate, event)}
-            className="bg-pink-600 text-white py-3 px-6 rounded-full font-semibold hover:bg-pink-700 transition"
+            className="bg-pink-600 text-white py-4 px-8 rounded-full font-semibold hover:bg-pink-700 transition"
           >
             Add these dates to your calendar
           </button>
