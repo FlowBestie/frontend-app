@@ -7,6 +7,7 @@ const PeriodCalculator = () => {
   const [cycleLength, setCycleLength] = useState('');
   const [periodLength, setPeriodLength] = useState('');
   const [nextPeriodDate, setNextPeriodDate] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   const calculateNextPeriod = () => {
     if (periodStartDate && cycleLength) {
@@ -24,7 +25,12 @@ const PeriodCalculator = () => {
       setNextPeriodDate(nextDate.toDateString());
 
       console.log(`User ${userId} has a cycle length of ${cycleLength} days.`);
+      setShowModal(true); // Show the modal with the results
     }
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
   };
 
   return (
@@ -78,19 +84,32 @@ const PeriodCalculator = () => {
           >
             Calculate Next Period
           </button>
-          {nextPeriodDate && (
-            <div className="mt-4 text-center text-lg text-green-700 font-medium">
-              Your next period is expected on: <br />
-              <strong>{nextPeriodDate}</strong>
-              {periodLength && (
-                <div className="mt-2">
-                  and is expected to last for <strong>{periodLength} days</strong>.
-                </div>
-              )}
-            </div>
-          )}
         </div>
       </div>
+
+      {/* Modal for displaying the result */}
+      {showModal && (
+        <div className="fixed inset-0 z-20 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white rounded-lg shadow-lg p-8 max-w-sm w-full text-center">
+            <h3 className="text-xl font-semibold mb-4 text-pink-400">Hey Bestie!</h3>
+            <p className="text-lg text-gray-700 mb-4">
+              Your next period is expected on: <br />
+              <strong>{nextPeriodDate}</strong>
+            </p>
+            {periodLength && (
+              <p className="text-lg text-gray-700">
+                and is expected to last for <strong>{periodLength} days</strong>.
+              </p>
+            )}
+            <button
+              onClick={closeModal}
+              className="mt-6 bg-pink-400 hover:bg-pink-600 text-white py-2 px-4 rounded-lg font-semibold transition duration-300"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

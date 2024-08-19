@@ -1,4 +1,5 @@
 import React from 'react';
+import GirlyRobot from '../../pages/landing-page/components/girlyRobot'; // Import the GirlyRobot component
 
 const Dashboard = () => {
   const cycleData = {
@@ -18,14 +19,18 @@ const Dashboard = () => {
 
   return (
     <div
-      className="min-h-screen bg-pink-50 text-pink-900"
+      className="min-h-screen py-16 bg-pink-200 text-pink-900"
       style={{ backgroundImage: "url('/src/assets/images/pastel-flowers.webp')" }}
     >
-      <div className="max-w-4xl mx-auto py-24">
-        <h1 className="text-5xl font-extrabold text-center mb-12 py-6">Your Cycle Results</h1>
+      <div className="max-w-4xl mx-auto">
+        {/* Girly Robot Greeting */}
+        <div><GirlyRobot />
+
+        <h1 className="text-4xl font-extrabold text-center mb-12 py-20">Dashboard</h1>
+        </div>
         <nav className="flex justify-center mb-8">
-          <a href="#" className="px-5 py-2 text-lg text-pink-600 border-b-4 border-pink-600">Dashboard</a>
-          <a href="#" className="px-5 py-2 text-lg text-pink-300">Calendar</a>
+          <a href="#" className="px-20 text-bold text-pink-600 border-b-4 border-pink-600">Your Cycle Results</a>
+          {/* <a href="#" className="px-5 py-2 text-lg text-pink-300">Calendar</a> */}
         </nav>
 
         <div className="bg-white shadow-lg p-8 rounded-3xl mb-8">

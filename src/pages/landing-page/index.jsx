@@ -19,7 +19,7 @@ const LandingPage = () => {
             Talk Periods To Us!
           </h3>
           <p className="text-lg md:text-xl mb-6">
-            Stay on top of your cycle with our easy-to-use period tracker. <br /> 
+            Hey Bestie!<br /> Stay on top of your cycle with our easy-to-use period tracker. <br /> 
             Plan ahead and take control of your health.
           </p>
 

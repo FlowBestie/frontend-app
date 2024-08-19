@@ -12,6 +12,7 @@ import Resources from './pages/pages/periodResources/resources';
 import { ToastContainer } from "react-toastify";
 import Dashboard from './pages/pages/dashboard';
 import Calendar from './pages/pages/calendar';
+import GirlyRobot from './pages/landing-page/components/girlyRobot';
 
 
 function App() {
@@ -55,6 +56,10 @@ function App() {
         {
           path: '/calendar',
           element: <Calendar />,
+        },
+        {
+          path: '/girly-robot',
+          element: <GirlyRobot />
         },
       ],
     },
