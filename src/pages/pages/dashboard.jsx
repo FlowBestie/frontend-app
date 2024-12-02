@@ -1,5 +1,6 @@
 import React from 'react';
-import GirlyRobot from '../../pages/landing-page/components/girlyRobot'; // Import the GirlyRobot component
+import GirlyRobot from '../../pages/landing-page/components/girlyRobot'; 
+
 
 const Dashboard = () => {
   const cycleData = {
@@ -29,7 +30,7 @@ const Dashboard = () => {
         <h1 className="text-4xl font-extrabold text-center mb-12 py-20">Dashboard</h1>
         </div>
         <nav className="flex justify-center mb-8">
-          <a href="#" className="px-20 text-bold text-pink-600 border-b-4 border-pink-600">Your Cycle Results</a>
+          <a href="#" className="px-20 font-bold text-pink-600 border-b-4 border-pink-600">Your Cycle Results</a>
           {/* <a href="#" className="px-5 py-2 text-lg text-pink-300">Calendar</a> */}
         </nav>
 

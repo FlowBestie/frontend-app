@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoImage from '../assets/images/flowBestie.png'; 
+import logoImage from '../assets/images/flowBestie.png';
 
 const Navbar = () => {
   return (
@@ -9,13 +9,13 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex-shrink-0">
           <Link to="/">
-            <img src={logoImage} alt="Your Logo" className="h-20 w-auto transition-transform duration-300 transform hover:scale-110" /> 
+            <img src={logoImage} alt="Your Logo" className="h-16 w-auto transition-transform duration-300 transform hover:scale-110" />
           </Link>
         </div>
 
         {/* Centered Links */}
         <div className="flex-grow flex justify-center">
-          <div className="flex space-x-10">
+          <div className="flex space-x-8 pl-16">
             <Link to="/period-calculator" className="text-white font-semibold text-lg hover:text-pink-300 transition duration-300">
               Period Calculator
             </Link>
@@ -25,11 +25,14 @@ const Navbar = () => {
             <Link to="/about" className="text-white font-semibold text-lg hover:text-pink-300 transition duration-300">
               About Us
             </Link>
+            <Link to="/dashboard" className="text-white font-semibold text-lg hover:text-pink-300 transition duration-300">
+            Dashboard
+          </Link>
           </div>
         </div>
 
         {/* Right-aligned Links */}
-        <div className="flex-shrink-0 hidden md:flex space-x-6">
+        <div className="flex-shrink-0 flex space-x-6">
           <Link to="/sign-in" className="text-white font-semibold text-lg hover:text-pink-300 transition duration-300">
             Sign In
           </Link>
