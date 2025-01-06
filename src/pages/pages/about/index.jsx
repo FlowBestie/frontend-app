@@ -1,10 +1,11 @@
 import React from 'react';
 import { FaRegHeart, FaRegLightbulb, FaRegUser } from 'react-icons/fa';
+import backgroundImage from '../../../assets/images/blueleaves.webp';
 
 const About = () => {
   return (
     <section className="text-center py-32 px-4 lg:px-8"
-    style={{ backgroundImage: "url('/src/assets/images/blueleaves.webp')" }}
+    style={{ backgroundImage: `url(${backgroundImage})` }}
 >
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-8 text-pink-600">About Us</h2>
