@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import backgroundImage from '../../assets/images/twohands.jpg';
 
 const LandingPage = () => {
   return (
     <div
       className="min-h-screen flex flex-col text-white"
       style={{
-        backgroundImage: "url('/src/assets/images/twohands.jpg')",
+        backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
