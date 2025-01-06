@@ -1,5 +1,6 @@
 import React from 'react';
 import GirlyRobot from '../../pages/landing-page/components/girlyRobot'; 
+import backgroundImage from '../../assets/images/blueleaves.webp';
 
 
 const Dashboard = () => {
@@ -21,7 +22,7 @@ const Dashboard = () => {
   return (
     <div
       className="min-h-screen py-16 bg-pink-200 text-pink-900"
-      style={{ backgroundImage: "url('/src/assets/images/pastel-flowers.webp')" }}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="max-w-4xl mx-auto">
         {/* Girly Robot Greeting */}

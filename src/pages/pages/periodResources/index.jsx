@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import backgroundImage from '../../../assets/images/blueleaves.webp';
 
 const PeriodResources = () => {
   const resources = [
@@ -27,7 +28,7 @@ const PeriodResources = () => {
 
   return (
     <section className="py-16 px-6 bg-white text-gray-900"
-    style={{ backgroundImage: "url('/src/assets/images/blueleaves.webp')" }}
+    style={{ backgroundImage: `url(${backgroundImage})` }}
 
     >
       <div className="max-w-4xl mx-auto py-16">

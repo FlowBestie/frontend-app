@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
+import backgroundImage from '../../assets/images/blueleaves.webp';
 
 const PeriodCalculator = () => {
   const [userId, setUserId] = useState('');
@@ -36,7 +37,7 @@ const PeriodCalculator = () => {
   return (
     <section
       className="min-h-screen flex items-center justify-center bg-fixed bg-cover bg-center"
-      style={{ backgroundImage: "url('/src/assets/images/blueleaves.webp')" }}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>

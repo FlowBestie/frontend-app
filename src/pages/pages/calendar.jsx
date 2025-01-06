@@ -1,4 +1,5 @@
 import React from 'react';
+import backgroundImage from '../../assets/images/blueleaves.webp';
 
 const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const datesArray = Array.from({ length: 30 }, (_, i) => i + 1);
@@ -6,7 +7,7 @@ const datesArray = Array.from({ length: 30 }, (_, i) => i + 1);
 const Calendar = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-fixed bg-cover bg-center"
-      style={{ backgroundImage: "url('/src/assets/images/blueleaves.webp')" }}>
+      style={{ backgroundImage: `url(${backgroundImage})` }}>
       
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>

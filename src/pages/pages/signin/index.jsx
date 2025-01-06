@@ -2,6 +2,7 @@ import React from "react";
 import { apiLogin } from "../../../services/auth";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import backgroundImage from '../../../assets/images/blueleaves.webp';
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -25,7 +26,7 @@ const SignIn = () => {
 
   return (
     <section className="text-center py-32 signin bg-gray-50"
-      style={{ backgroundImage: "url('/src/assets/images/blueleaves.webp')" }}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <h2 className="text-3xl font-semibold mb-6">Sign In</h2>
       <form className="flex flex-col items-center max-w-md mx-auto" onSubmit={handleSubmit}>

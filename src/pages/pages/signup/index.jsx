@@ -1,6 +1,7 @@
 import { toast } from "react-toastify";
 import { apiRegister } from "../../../services/auth";
 import { useNavigate } from "react-router-dom";
+import backgroundImage from '../../../assets/images/blueleaves.webp';
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ const SignUp = () => {
 
   return (
     <section className="text-center py-32 signup"
-      style={{ backgroundImage: "url('/src/assets/images/blueleaves.webp')" }}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <h2 className="text-3xl font-semibold mb-6">Sign Up</h2>
       <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
